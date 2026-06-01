@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="pp_page_title">سياسة الخصوصية — Sequent</title>
+<script>
+(function(){
+  var l=localStorage.getItem('sq_lang')||'ar';
+  document.documentElement.lang=l;
+  document.documentElement.dir=l==='ar'?'rtl':'ltr';
+})();
+</script>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/privacy.css">
+<script src="i18n/ar.js" defer></script>
+<script src="i18n/en.js" defer></script>
+<script src="i18n/es.js" defer></script>
+<script src="i18n/fr.js" defer></script>
+<script src="i18n/de.js" defer></script>
+<script src="i18n/pt.js" defer></script>
+<script src="i18n/hi.js" defer></script>
+<script src="i18n/zh.js" defer></script>
+</head>
+<body>
+
+<div class="site-banner" id="site-banner">
+  <img src="assets/images/banner.png" alt="Sequent">
+</div>
+
+<nav class="nav" id="main-nav">
+  <div class="nav-inner">
+    <ul class="nav-links">
+      <li><a href="index.html#ch1" data-i18n="nav_story">فصول القصة</a></li>
+      <li><a href="tour.html" data-i18n="nav_tour">جولة تفاعلية</a></li>
+      <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+    </ul>
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/app_icon.png" alt="Sequent">
+      <span data-i18n="nav_logo_label">Sequent</span>
+    </a>
+    <div class="nav-actions">
+      <div class="nav-lang-wrap">
+        <button class="nav-lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="lang-label">العربية</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-lang-dropdown" id="lang-dropdown">
+          <button class="lang-opt" data-lang="ar">العربية</button>
+          <button class="lang-opt" data-lang="en">English</button>
+          <button class="lang-opt" data-lang="es">Español</button>
+          <button class="lang-opt" data-lang="fr">Français</button>
+          <button class="lang-opt" data-lang="de">Deutsch</button>
+          <button class="lang-opt" data-lang="pt">Português</button>
+          <button class="lang-opt" data-lang="hi">हिन्दी</button>
+          <button class="lang-opt" data-lang="zh">中文</button>
+        </div>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile" id="mob-nav">
+  <a href="index.html#ch1" data-i18n="nav_story">فصول القصة</a>
+  <a href="tour.html" data-i18n="nav_tour">جولة تفاعلية</a>
+  <a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a>
+</div>
+
+<header class="page-header">
+  <div class="container">
+    <a href="index.html" class="page-header-back" data-i18n="tour_back_home">← العودة للرئيسية</a>
+    <h1 data-i18n="pp_hero_title">سياسة الخصوصية</h1>
+    <p data-i18n="pp_hero_subtitle">كيف يتعامل Sequent مع بياناتك</p>
+  </div>
+</header>
+
+<main>
+  <section class="pp-section">
+    <div class="pp-content">
+
+      <!-- Effective date -->
+      <div class="pp-meta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span data-i18n="pp_effective_date">تاريخ النفاذ: 1 يونيو 2026</span>
+      </div>
+
+      <!-- Introduction -->
+      <div class="pp-intro">
+        <p class="pp-body" data-i18n="pp_intro_p1">Sequent هو تطبيق لتتبع الالتزامات المالية الشخصية والأقساط.</p>
+        <p class="pp-body" data-i18n="pp_intro_p2">توضح سياسة الخصوصية هذه المعلومات التي يتعامل معها Sequent.</p>
+        <p class="pp-body" data-i18n="pp_intro_p3">أهم ما يمكننا قوله مقدماً: يعمل Sequent بالكامل دون إنترنت.</p>
+      </div>
+
+      <!-- Section 1: Information We Collect -->
+      <div class="pp-block">
+        <div class="pp-section-title" data-i18n="pp_s1_title">1. المعلومات التي نجمعها</div>
+        <p class="pp-body" data-i18n="pp_s1_p1">لا يجمع Sequent أي معلومات شخصية.</p>
+        <p class="pp-body" data-i18n="pp_s1_p2">البيانات المالية التي تسجلها تُخزَّن في قاعدة بيانات SQLite محلية على جهازك.</p>
+        <p class="pp-body" data-i18n="pp_s1_p3">المعلومات الوحيدة التي يخزنها Sequent على جهازك هي ما تختار إدخاله صراحةً:</p>
+        <ul class="pp-list">
+          <li data-i18n="pp_s1_li1">اسمك، إذا اخترت تقديمه</li>
+          <li data-i18n="pp_s1_li2">تفاصيل الالتزامات المالية كالأسماء والمبالغ وتواريخ الاستحقاق</li>
+          <li data-i18n="pp_s1_li3">سجلات المدفوعات والتاريخ</li>
+          <li data-i18n="pp_s1_li4">إعدادات التطبيق وتفضيلاته بما في ذلك اللغة والعملة ووقت الإشعارات</li>
+          <li data-i18n="pp_s1_li5">تجزئة مشفرة لرمز PIN الخاص بك، إذا اخترت تعيينه</li>
+        </ul>
+      </div>
+
+      <!-- Section 2: How Your Data Is Stored -->
+      <div class="pp-block">
+        <div class="pp-section-title" data-i18n="pp_s2_title">2. كيف تُخزَّن بياناتك</div>
+        <p class="pp-body" data-i18n="pp_s2_p1">تُخزَّن جميع البيانات محلياً على جهازك باستخدام SQLite.</p>
+        <div class="pp-subsection">
+          <div class="pp-subsection-title" data-i18n="pp_s2_pin_title">أمان رمز PIN</div>
+          <p class="pp-body" data-i18n="pp_s2_pin_p1">إذا قمت بتعيين رمز PIN لقفل التطبيق، فلن يخزن Sequent رمز PIN نفسه مطلقاً.</p>
+        </div>
+        <div class="pp-subsection">
+          <div class="pp-subsection-title" data-i18n="pp_s2_bio_title">المصادقة البيومترية</div>
+          <p class="pp-body" data-i18n="pp_s2_bio_p1">إذا استخدمت بصمة الإصبع أو Face ID، فلن يصل Sequent أو يجمع أو يخزن أي بيانات بيومترية.</p>
+        </div>
+        <div class="pp-subsection">
+          <div class="pp-subsection-title" data-i18n="pp_s2_backup_title">ملفات النسخ الاحتياطي المحلية</div>
+          <p class="pp-body" data-i18n="pp_s2_backup_p1">يمكن لـ Sequent إنشاء ملفات نسخ احتياطي لبياناتك وحفظها في تخزين جهازك.</p>
+        </div>
+      </div>
+
+      <!-- Section 3: Information We Do Not Collect -->
+      <div class="pp-block">
+        <div class="pp-section-title" data-i18n="pp_s3_title">3. المعلومات التي لا نجمعها</div>
+        <p class="pp-body" data-i18n="pp_s3_p1">لتوضيح الأمر تماماً، إليك ما لا يفعله Sequent:</p>
+        <p class="pp-body" data-i18n="pp_s3_p2">لا نجمع اسمك أو عنوان بريدك الإلكتروني أو رقم هاتفك أو أي معلومات تواصل.</p>
+        <p class="pp-body" data-i18n="pp_s3_p3">لا يحتوي Sequent على أي SDK للتحليلات، ولا SDK للإعلانات، ولا أي مكتبة تتبع من أي نوع.</p>
+      </div>
+
+      <!-- Section 4: Data Sharing and Third Parties -->
+      <div class="pp-block">
+        <div class="pp-section-title" data-i18n="pp_s4_title">4. مشاركة البيانات مع أطراف ثالثة</div>
+        <p class="pp-body" data-i18n="pp_s4_p1">لا يشارك Sequent بياناتك مع أي طرف — لأننا لا نملكها.</p>
+        <p class="pp-body" data-i18n="pp_s4_p2">لا نبيع أو نتاجر أو نؤجر أو ننقل أي معلومات إلى أطراف ثالثة.</p>
+        <p class="pp-body" data-i18n="pp_s4_p3">الطريقة الوحيدة التي يمكن من خلالها مغادرة بياناتك جهازك هي إذا اخترت تصدير أو مشاركة ملف احتياطي يدوياً.</p>
+      </div>
+
+      <!-- Section 5: App Permissions Explained -->
+      <div class="pp-block">
+        <div class="pp-section-title" data-i18n="pp_s5_title">5. صلاحيات التطبيق الموضَّحة</div>
+        <p class="pp-body" data-i18n="pp_s5_intro">يطلب Sequent صلاحيات الجهاز التالية.</p>
+        <div class="pp-subsection">
+          <div class="pp-subsection-title" data-i18n="pp_s5_notif_title">الإشعارات</div>
+          <p class="pp-body" data-i18n="pp_s5_notif_p1">لعرض تذكيرات الدفع على جهازك.</p>
+        </div>
+        <div class="pp-subsection">
+          <div class="pp-subsection-title" data-i18n="pp_s5_alarm_title">جدولة التنبيهات الدقيقة</div>
+          <p class="pp-body" data-i18n="pp_s5_alarm_p1">مطلوبة على Android 12 وما فوق لجدولة تذكيرات الدفع في وقت محدد.</p>
+        </div>
+        <div class="pp-subsection">
+          <div class="pp-subsection-title" data-i18n="pp_s5_battery_title">الاستثناء من تحسين البطارية</div>
+          <p class="pp-body" data-i18n="pp_s5_battery_p1">مطلوبة لضمان استمرار عمل الإشعارات المجدولة بشكل صحيح.</p>
+        </div>
+        <div class="pp-subsection">
+          <div class="pp-subsection-title" data-i18n="pp_s5_bio_title">القياسات الحيوية</div>
+          <p class="pp-body" data-i18n="pp_s5_bio_p1">للسماح لك بفتح التطبيق باستخدام بصمتك أو Face ID.</p>
+        </div>
+        <div class="pp-subsection">
+          <div class="pp-subsection-title" data-i18n="pp_s5_storage_title">التخزين (الخارجي)</div>
+          <p class="pp-body" data-i18n="pp_s5_storage_p1">لحفظ ملفات النسخ الاحتياطي المحلية في تخزين جهازك.</p>
+        </div>
+      </div>
+
+      <!-- Section 6: Children's Privacy -->
+      <div class="pp-block">
+        <div class="pp-section-title" data-i18n="pp_s6_title">6. خصوصية الأطفال</div>
+        <p class="pp-body" data-i18n="pp_s6_p1">لا يجمع Sequent معلومات عن قصد من أي شخص، بما في ذلك الأطفال دون سن 13 عاماً.</p>
+        <p class="pp-body" data-i18n="pp_s6_p2">التطبيق مصمم كأداة مالية شخصية ومخصص للبالغين.</p>
+      </div>
+
+      <!-- Section 7: Deleting Your Data -->
+      <div class="pp-block">
+        <div class="pp-section-title" data-i18n="pp_s7_title">7. حذف بياناتك</div>
+        <p class="pp-body" data-i18n="pp_s7_p1">لديك سيطرة كاملة على بياناتك في جميع الأوقات.</p>
+        <p class="pp-body" data-i18n="pp_s7_p2">لحذف التزامات أو سجلات دفع محددة، استخدم وظيفة الحذف داخل التطبيق.</p>
+        <p class="pp-body" data-i18n="pp_s7_p3">بما أننا لا نحتفظ بأي من بياناتك على أي خادم، فلا يوجد شيء لنحذفه من طرفنا.</p>
+      </div>
+
+      <!-- Section 8: Changes to This Policy -->
+      <div class="pp-block">
+        <div class="pp-section-title" data-i18n="pp_s8_title">8. التغييرات على هذه السياسة</div>
+        <p class="pp-body" data-i18n="pp_s8_p1">إذا أجرينا تغييرات على سياسة الخصوصية هذه، سنقوم بتحديث تاريخ النفاذ في أعلى هذه الصفحة.</p>
+        <p class="pp-body" data-i18n="pp_s8_p2">نشجعك على مراجعة هذه السياسة بشكل دوري.</p>
+      </div>
+
+      <!-- Section 9: Contact Us -->
+      <div class="pp-block">
+        <div class="pp-section-title" data-i18n="pp_s9_title">9. تواصل معنا</div>
+        <p class="pp-body" data-i18n="pp_s9_p1">إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، فلا تتردد في التواصل معنا:</p>
+        <div class="pp-contact-card">
+          <div class="pp-contact-row">
+            <span class="pp-contact-label" data-i18n="pp_s9_publisher_label">الناشر:</span>
+            <span>Sequent Ap</span>
+          </div>
+          <div class="pp-contact-row">
+            <span class="pp-contact-label" data-i18n="pp_s9_email_label">البريد الإلكتروني:</span>
+            <a href="mailto:sequent.ap@gmail.com">sequent.ap@gmail.com</a>
+          </div>
+          <div class="pp-contact-row">
+            <span class="pp-contact-label" data-i18n="pp_s9_website_label">الموقع الإلكتروني:</span>
+            <a href="https://sequentapp.github.io/sequentapp/" target="_blank" rel="noopener">sequentapp.github.io/sequentapp</a>
+          </div>
+        </div>
+        <p class="pp-body" style="margin-top:16px;" data-i18n="pp_s9_response">نهدف إلى الرد على جميع الاستفسارات في غضون 5 أيام عمل.</p>
+      </div>
+
+      <!-- Footer note -->
+      <div class="pp-footer-note" data-i18n="pp_footer_note">Sequent Ap · سياسة الخصوصية · نافذة منذ 1 يونيو 2026 · الإصدار 1.0</div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo"><img src="assets/images/app_icon.png" alt="Sequent"><span data-i18n="nav_logo_label">Sequent</span></div>
+      <p class="footer-tagline" data-i18n="footer_tagline">رفيقك الذكي لتنظيم الالتزامات المالية.</p>
+      <p class="footer-free" data-i18n="footer_free">✦ Sequent مجاني دائماً وبلا إعلانات.</p>
+      <p class="footer-disc" data-i18n="footer_disclaimer">Sequent أداة توثيق وتتبع فقط.</p>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="nav_home">تصفح</div>
+      <div class="footer-links">
+        <a href="index.html" data-i18n="footer_home">الرئيسية</a>
+        <a href="tour.html" data-i18n="footer_tour">جولة تفاعلية</a>
+        <a href="faq.html" data-i18n="footer_faq">الأسئلة الشائعة</a>
+        <a href="privacy.html" class="active" data-i18n="footer_privacy">سياسة الخصوصية</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="footer_contact">تواصل معنا</div>
+      <a href="https://x.com/sequent2026" target="_blank" rel="noopener" class="footer-social-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        @sequent2026
+      </a>
+      <a href="mailto:sequent.ap@gmail.com" class="footer-social-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        sequent.ap@gmail.com
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-rights" data-i18n="footer_rights">© 2026 Sequent.</span>
+    <div class="footer-langs-list">
+      <button class="footer-lang-item" data-lang="ar">العربية</button>
+      <button class="footer-lang-item" data-lang="en">English</button>
+      <button class="footer-lang-item" data-lang="es">Español</button>
+      <button class="footer-lang-item" data-lang="fr">Français</button>
+      <button class="footer-lang-item" data-lang="de">Deutsch</button>
+      <button class="footer-lang-item" data-lang="pt">Português</button>
+      <button class="footer-lang-item" data-lang="hi">हिन्दी</button>
+      <button class="footer-lang-item" data-lang="zh">中文</button>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

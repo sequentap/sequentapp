@@ -1,0 +1,191 @@
+/* ── Privacy Policy Page Styles ── */
+
+.pp-section {
+  padding: 64px 0 96px;
+  background: var(--bg);
+}
+
+.pp-content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Effective date metadata badge */
+.pp-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue-faint);
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  padding: 8px 18px;
+  margin-bottom: 40px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--blue);
+}
+
+/* Intro block */
+.pp-intro {
+  margin-bottom: 48px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid var(--border);
+}
+
+/* Each numbered section */
+.pp-block {
+  margin-bottom: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pp-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Section title (numbered heading) */
+.pp-section-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--blue);
+  display: inline-block;
+}
+
+/* Subsection card (PIN, Biometric, Backup, Permissions) */
+.pp-subsection {
+  margin-top: 20px;
+  padding: 18px 20px;
+  background: var(--bg-gray);
+  border-radius: var(--r-md);
+  border-inline-start: 3px solid var(--blue);
+}
+
+.pp-subsection-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+/* Body paragraphs */
+.pp-body {
+  font-size: 0.9375rem;
+  line-height: 1.85;
+  color: var(--text-2);
+  margin-bottom: 14px;
+}
+
+.pp-body:last-child {
+  margin-bottom: 0;
+}
+
+/* Bullet list (Section 1 items) */
+.pp-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 4px;
+}
+
+.pp-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 7px 0;
+  font-size: 0.9375rem;
+  color: var(--text-2);
+  line-height: 1.7;
+}
+
+.pp-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+  flex-shrink: 0;
+  margin-top: 9px;
+}
+
+/* Contact info card (Section 9) */
+.pp-contact-card {
+  background: var(--bg-gray);
+  border-radius: var(--r-lg);
+  padding: 22px 26px;
+  margin-top: 20px;
+  border: 1px solid var(--border);
+}
+
+.pp-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  padding: 7px 0;
+  font-size: 0.875rem;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.pp-contact-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pp-contact-label {
+  font-weight: 600;
+  color: var(--navy);
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.pp-contact-row a {
+  color: var(--blue);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.pp-contact-row a:hover {
+  text-decoration: underline;
+}
+
+/* Footer note */
+.pp-footer-note {
+  text-align: center;
+  padding-top: 32px;
+  margin-top: 56px;
+  font-size: 0.8125rem;
+  color: var(--text-3);
+  border-top: 1px solid var(--border);
+}
+
+/* ── Responsive ── */
+@media (max-width: 639px) {
+  .pp-section {
+    padding: 40px 0 64px;
+  }
+
+  .pp-content {
+    padding: 0 16px;
+  }
+
+  .pp-subsection {
+    padding: 14px 16px;
+  }
+
+  .pp-contact-card {
+    padding: 16px 18px;
+  }
+
+  .pp-contact-label {
+    min-width: 100px;
+  }
+
+  .pp-section-title {
+    font-size: 1rem;
+  }
+}

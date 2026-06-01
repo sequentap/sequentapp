@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sequent</title>
+<script>
+(function(){
+  var l=localStorage.getItem('sq_lang')||'ar';
+  document.documentElement.lang=l;
+  document.documentElement.dir=l==='ar'?'rtl':'ltr';
+})();
+</script>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/tour.css">
+<script src="i18n/ar.js" defer></script>
+<script src="i18n/en.js" defer></script>
+<script src="i18n/es.js" defer></script>
+<script src="i18n/fr.js" defer></script>
+<script src="i18n/de.js" defer></script>
+<script src="i18n/pt.js" defer></script>
+<script src="i18n/hi.js" defer></script>
+<script src="i18n/zh.js" defer></script>
+</head>
+<body>
+
+<div class="site-banner" id="site-banner">
+  <img src="assets/images/banner.png" alt="Sequent">
+</div>
+
+<nav class="nav" id="main-nav">
+  <div class="nav-inner">
+    <ul class="nav-links">
+      <li><a href="index.html#ch1" data-i18n="nav_story">فصول القصة</a></li>
+      <li><a href="tour.html" class="active" data-i18n="nav_tour">جولة تفاعلية</a></li>
+      <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+    </ul>
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/app_icon.png" alt="Sequent">
+      <span data-i18n="nav_logo_label">Sequent</span>
+    </a>
+    <div class="nav-actions">
+      <div class="nav-lang-wrap">
+        <button class="nav-lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="lang-label">العربية</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-lang-dropdown" id="lang-dropdown">
+          <button class="lang-opt" data-lang="ar">العربية</button>
+          <button class="lang-opt" data-lang="en">English</button>
+          <button class="lang-opt" data-lang="es">Español</button>
+          <button class="lang-opt" data-lang="fr">Français</button>
+          <button class="lang-opt" data-lang="de">Deutsch</button>
+          <button class="lang-opt" data-lang="pt">Português</button>
+          <button class="lang-opt" data-lang="hi">हिन्दी</button>
+          <button class="lang-opt" data-lang="zh">中文</button>
+        </div>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile" id="mob-nav">
+  <a href="index.html#ch1" data-i18n="nav_story">فصول القصة</a>
+  <a href="tour.html" data-i18n="nav_tour">جولة تفاعلية</a>
+  <a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a>
+</div>
+
+<header class="page-header">
+  <div class="container">
+    <a href="index.html" class="page-header-back" data-i18n="tour_back_home">← العودة للرئيسية</a>
+    <h1 id="tour-main-title" data-i18n="tour_step_1_title">الشاشة الرئيسية</h1>
+    <p data-i18n="tour_page_subtitle">استعرض شاشات Sequent خطوة بخطوة</p>
+  </div>
+</header>
+
+<main class="tour-section">
+  <div class="container">
+
+    <div class="tour-indicator">
+      <div class="tour-dots">
+        <button class="tour-dot active"></button>
+        <button class="tour-dot"></button>
+        <button class="tour-dot"></button>
+        <button class="tour-dot"></button>
+        <button class="tour-dot"></button>
+      </div>
+      <span class="tour-indicator-label" id="step-counter"></span>
+    </div>
+
+    <div class="tour-nav">
+      <button class="tour-btn" id="tour-prev" disabled>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        <span data-i18n="tour_prev">السابق</span>
+      </button>
+      <button class="tour-btn tour-btn-next" id="tour-next">
+        <span data-i18n="tour_next">التالي</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <p class="tour-keyboard-hint" data-i18n="tour_keyboard_hint">استخدم مفاتيح الأسهم للتنقل</p>
+
+    <div class="tour-steps">
+
+      <!-- Step 1 -->
+      <div class="tour-step active">
+        <div class="step-info">
+          <div class="step-badge">01 / 05</div>
+          <h2 class="step-title" data-i18n="tour_step_1_title">الشاشة الرئيسية</h2>
+          <p class="step-desc" data-i18n="tour_step_1_desc">تُظهر لوحة التحكم ملخصاً شاملاً لوضعك المالي. تُعرض بطاقة الرصيد الإجمالي المتبقي، والمبلغ المستحق هذا الشهر، وإحصائيات المدفوعات. كل التزام يظهر ببطاقته الخاصة مع زر "ادفع الآن" للسداد الفوري أو "تخطي" للتأجيل.</p>
+        </div>
+        <div class="step-visual">
+          <div class="step-phone">
+            <div class="step-notch"></div>
+            <div class="step-screen">
+              <img id="tour-img-1" src="assets/images/screens/screen3_ar.png" alt="الشاشة الرئيسية">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="tour-step">
+        <div class="step-info">
+          <div class="step-badge">02 / 05</div>
+          <h2 class="step-title" data-i18n="tour_step_2_title">إضافة التزام جديد</h2>
+          <p class="step-desc" data-i18n="tour_step_2_desc">أضف التزاماً جديداً بسهولة. اختر نوعه، تكرار الدفع من 8 خيارات، وأدخل المبلغ وتاريخ أول استحقاق. أدخل أي حقلين من الثلاثة ويحسب Sequent الثالث تلقائياً.</p>
+        </div>
+        <div class="step-visual">
+          <div class="step-phone">
+            <div class="step-notch"></div>
+            <div class="step-screen">
+              <img id="tour-img-2" src="assets/images/screens/screen2_ar.png" alt="إضافة التزام">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="tour-step">
+        <div class="step-info">
+          <div class="step-badge">03 / 05</div>
+          <h2 class="step-title" data-i18n="tour_step_3_title">تفاصيل الالتزام</h2>
+          <p class="step-desc" data-i18n="tour_step_3_desc">تعرض شاشة التفاصيل خارطة طريق السداد الكاملة لكل دفعة مع حالتها. يمكنك سداد دفعات منفردة أو متعددة، تسوية الكامل بسداد مبكر كاملاً، أو تعديل الالتزام وإعادة احتساب الجدول تلقائياً.</p>
+        </div>
+        <div class="step-visual">
+          <div class="step-phone">
+            <div class="step-notch"></div>
+            <div class="step-screen">
+              <img id="tour-img-3" src="assets/images/screens/screen4_ar.png" alt="تفاصيل الالتزام">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="tour-step">
+        <div class="step-info">
+          <div class="step-badge">04 / 05</div>
+          <h2 class="step-title" data-i18n="tour_step_4_title">التحليلات المالية</h2>
+          <p class="step-desc" data-i18n="tour_step_4_desc">تعرض شاشة التحليلات مسار سداد الديون، ومؤشر الصحة المالية، ونسبة الإنجاز، وتاريخ التحرر المالي المتوقع. رسم بياني يُظهر مسارك نحو الحرية المالية.</p>
+        </div>
+        <div class="step-visual">
+          <div class="step-phone">
+            <div class="step-notch"></div>
+            <div class="step-screen">
+              <img id="tour-img-4" src="assets/images/screens/screen5_ar.png" alt="التحليلات المالية">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="tour-step">
+        <div class="step-info">
+          <div class="step-badge">05 / 05</div>
+          <h2 class="step-title" data-i18n="tour_step_5_title">الإعدادات</h2>
+          <p class="step-desc" data-i18n="tour_step_5_desc">خصّص تجربتك بالكامل: اختر من بين 8 لغات و59 عملة، حدد وقت الإشعارات اليومية، فعّل قفل التطبيق بالبصمة أو رمز PIN، وأنشئ نسخة احتياطية أسبوعية لحماية بياناتك.</p>
+        </div>
+        <div class="step-visual">
+          <div class="step-phone">
+            <div class="step-notch"></div>
+            <div class="step-screen">
+              <img id="tour-img-5" src="assets/images/screens/screen7_ar.png" alt="الإعدادات">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo"><img src="assets/images/app_icon.png" alt="Sequent"><span data-i18n="nav_logo_label">Sequent</span></div>
+      <p class="footer-tagline" data-i18n="footer_tagline">رفيقك الذكي لتنظيم الالتزامات المالية.</p>
+      <p class="footer-free" data-i18n="footer_free">✦ Sequent مجاني دائماً وبلا إعلانات.</p>
+      <p class="footer-disc" data-i18n="footer_disclaimer">Sequent أداة توثيق وتتبع فقط.</p>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="nav_home">تصفح</div>
+      <div class="footer-links">
+        <a href="index.html" data-i18n="footer_home">الرئيسية</a>
+        <a href="tour.html" data-i18n="footer_tour">جولة تفاعلية</a>
+        <a href="faq.html" data-i18n="footer_faq">الأسئلة الشائعة</a>
+        <a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="footer_contact">تواصل معنا</div>
+      <a href="https://x.com/sequent2026" target="_blank" rel="noopener" class="footer-social-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        @sequent2026
+      </a>
+      <a href="mailto:sequent.ap@gmail.com" class="footer-social-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        sequent.ap@gmail.com
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-rights" data-i18n="footer_rights">© 2026 Sequent.</span>
+    <div class="footer-langs-list">
+      <button class="footer-lang-item" data-lang="ar">العربية</button>
+      <button class="footer-lang-item" data-lang="en">English</button>
+      <button class="footer-lang-item" data-lang="es">Español</button>
+      <button class="footer-lang-item" data-lang="fr">Français</button>
+      <button class="footer-lang-item" data-lang="de">Deutsch</button>
+      <button class="footer-lang-item" data-lang="pt">Português</button>
+      <button class="footer-lang-item" data-lang="hi">हिन्दी</button>
+      <button class="footer-lang-item" data-lang="zh">中文</button>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/tour.js"></script>
+</body>
+</html>

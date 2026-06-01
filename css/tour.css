@@ -1,0 +1,82 @@
+/* ============================================================
+   SEQUENT — Tour Page CSS
+   ============================================================ */
+
+.tour-section { padding:64px 0 96px; }
+.tour-section .container { max-width:1000px; }
+
+/* ── Step indicator ── */
+.tour-indicator {
+  display:flex; align-items:center; justify-content:center;
+  gap:12px; margin-bottom:40px; flex-wrap:wrap;
+}
+.tour-dots { display:flex; gap:8px; }
+.tour-dot {
+  width:10px; height:10px; border-radius:50%;
+  background:var(--border); transition:all var(--t);
+  cursor:pointer; border:none; padding:0;
+}
+.tour-dot.active { background:var(--blue); width:28px; border-radius:5px; }
+.tour-indicator-label { font-size:0.85rem; color:var(--text-3); font-weight:500; }
+
+/* ── Nav buttons ── */
+.tour-nav {
+  display:flex; align-items:center; justify-content:center;
+  gap:16px; margin-bottom:48px; flex-wrap:wrap;
+}
+.tour-btn {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:11px 24px; border-radius:var(--r-md);
+  border:2px solid var(--blue); background:transparent;
+  color:var(--blue); font-size:0.92rem; font-weight:600;
+  transition:all var(--t);
+}
+.tour-btn:hover { background:var(--blue); color:#fff; }
+.tour-btn:disabled { opacity:0.3; cursor:not-allowed; pointer-events:none; }
+.tour-btn-next { background:var(--blue); color:#fff; }
+.tour-btn-next:hover { background:var(--navy); border-color:var(--navy); }
+.tour-keyboard-hint { font-size:0.78rem; color:var(--text-3); text-align:center; margin-top:-28px; margin-bottom:32px; }
+
+/* ── Steps ── */
+.tour-steps { position:relative; }
+.tour-step { display:none; animation:fade-in 0.35s ease; }
+.tour-step.active {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:56px; align-items:start;
+}
+@keyframes fade-in { from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);} }
+
+/* Step info */
+.step-info { padding-block:8px; }
+.step-badge {
+  display:inline-flex; align-items:center; gap:6px;
+  background:var(--blue-faint); color:var(--navy);
+  font-size:0.75rem; font-weight:700;
+  padding:5px 14px; border-radius:var(--r-pill);
+  margin-bottom:18px; letter-spacing:0.04em;
+}
+.step-title { font-size:clamp(1.4rem,2.5vw,1.9rem); font-weight:900; color:var(--navy); margin-bottom:16px; line-height:1.3; }
+.step-desc { font-size:0.95rem; color:var(--text-2); line-height:1.75; }
+
+/* Step phone */
+.step-visual { display:flex; justify-content:center; }
+.step-phone {
+  width:272px; background:var(--navy); border-radius:44px; padding:14px;
+  box-shadow:var(--sh-lg), 0 0 60px rgba(0,86,210,0.10);
+}
+.step-notch { width:72px; height:8px; background:rgba(255,255,255,0.10); border-radius:4px; margin:0 auto 12px; }
+.step-screen { background:var(--bg); border-radius:32px; overflow:hidden; min-height:480px; }
+.step-screen img { width:100%; height:auto; display:block; }
+
+/* ── Responsive Tour ── */
+@media(max-width:1023px){
+  .tour-step.active { grid-template-columns:1fr; }
+  .step-visual { order:-1; }
+  .step-phone { width:240px; }
+}
+@media(max-width:639px){
+  .tour-section { padding:48px 0 72px; }
+  .step-phone { width:200px; }
+  .step-screen { min-height:380px; }
+  .tour-keyboard-hint { display:none; }
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sequent</title>
+<script>
+(function(){
+  var l=localStorage.getItem('sq_lang')||'ar';
+  document.documentElement.lang=l;
+  document.documentElement.dir=l==='ar'?'rtl':'ltr';
+})();
+</script>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/faq.css">
+<script src="i18n/ar.js" defer></script>
+<script src="i18n/en.js" defer></script>
+<script src="i18n/es.js" defer></script>
+<script src="i18n/fr.js" defer></script>
+<script src="i18n/de.js" defer></script>
+<script src="i18n/pt.js" defer></script>
+<script src="i18n/hi.js" defer></script>
+<script src="i18n/zh.js" defer></script>
+</head>
+<body>
+
+<div class="site-banner" id="site-banner">
+  <img src="assets/images/banner.png" alt="Sequent">
+</div>
+
+<nav class="nav" id="main-nav">
+  <div class="nav-inner">
+    <ul class="nav-links">
+      <li><a href="index.html#ch1" data-i18n="nav_story">فصول القصة</a></li>
+      <li><a href="tour.html" data-i18n="nav_tour">جولة تفاعلية</a></li>
+      <li><a href="faq.html" class="active" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+    </ul>
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/app_icon.png" alt="Sequent">
+      <span data-i18n="nav_logo_label">Sequent</span>
+    </a>
+    <div class="nav-actions">
+      <div class="nav-lang-wrap">
+        <button class="nav-lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="lang-label">العربية</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-lang-dropdown" id="lang-dropdown">
+          <button class="lang-opt" data-lang="ar">العربية</button>
+          <button class="lang-opt" data-lang="en">English</button>
+          <button class="lang-opt" data-lang="es">Español</button>
+          <button class="lang-opt" data-lang="fr">Français</button>
+          <button class="lang-opt" data-lang="de">Deutsch</button>
+          <button class="lang-opt" data-lang="pt">Português</button>
+          <button class="lang-opt" data-lang="hi">हिन्दी</button>
+          <button class="lang-opt" data-lang="zh">中文</button>
+        </div>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile" id="mob-nav">
+  <a href="index.html#ch1" data-i18n="nav_story">فصول القصة</a>
+  <a href="tour.html" data-i18n="nav_tour">جولة تفاعلية</a>
+  <a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a>
+</div>
+
+<header class="page-header">
+  <div class="container">
+    <a href="index.html" class="page-header-back" data-i18n="tour_back_home">← العودة للرئيسية</a>
+    <h1 data-i18n="faq_hero_title">كيف يمكننا مساعدتك؟</h1>
+    <p data-i18n="faq_hero_subtitle">إجابات لأكثر الأسئلة شيوعاً حول Sequent</p>
+  </div>
+</header>
+
+<main class="faq-section">
+  <div class="faq-wrap">
+    <div class="faq-categories">
+
+      <!-- البدء السريع -->
+      <div>
+        <h2 class="faq-cat-title" data-i18n="faq_cat_gs">البدء السريع</h2>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_gs_q1">ما الفرق بين الالتزام المحدد بوقت والالتزام الدائم؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_gs_a1">الالتزام المحدد بوقت له إجمالي دين ثابت وينتهي تلقائياً عند اكتمال السداد. أما الالتزام الدائم فلا تاريخ انتهاء له ويتكرر إلى أجل غير مسمى.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_gs_q2">هل يحتاج التطبيق إلى اتصال بالإنترنت؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_gs_a2">لا. يعمل Sequent بالكامل دون إنترنت. جميع بياناتك مخزنة بشكل خاص على جهازك.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_gs_q3">ماذا يحدث إذا أزلت التطبيق؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_gs_a3">ستُحذف بياناتك عند إزالة التطبيق ما لم تنشئ نسخة احتياطية أولاً.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_gs_q4">هل يسدّد Sequent الدفعات نيابةً عني؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_gs_a4">لا. Sequent أداة توثيق وتتبّع فقط. لا يُحوّل أموالاً ولا يتواصل مع أي جهة مالية.</p></div>
+        </div>
+      </div>
+
+      <!-- الالتزامات -->
+      <div>
+        <h2 class="faq-cat-title" data-i18n="faq_cat_cm">الالتزامات</h2>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_cm_q1">غيّرت مبلغ الدفعة — هل سأفقد سجلّي؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_cm_a1">لا. يُعيد Sequent توليد الدفعات المستقبلية فقط. جميع الدفعات المسددة محفوظة بشكل دائم.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_cm_q2">لماذا يعرض التطبيق عدداً مختلفاً من الأقساط؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_cm_a2">يُقرّب Sequent دائماً للأعلى لضمان تغطية كامل الدين. القسط الأخير يُخفَّض تلقائياً.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_cm_q3">ماذا تفعل خاصية السداد المبكر الكامل؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_cm_a3">تُعلّم جميع الدفعات المخططة المتبقية كمسددة دفعة واحدة، وتُغلق الالتزام فوراً.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_cm_q4">ما هي خاصية سداد الدفعة المقدمة؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_cm_a4">تتيح لك اختيار عدة دفعات مستقبلية وتعليمها مسددة في خطوة واحدة.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_cm_q5">كيف يعمل الحساب التلقائي عند إضافة التزام؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_cm_a5">عند ملء أي حقلين من الثلاثة يُحسب الثالث تلقائياً.</p></div>
+        </div>
+      </div>
+
+      <!-- المدفوعات -->
+      <div>
+        <h2 class="faq-cat-title" data-i18n="faq_cat_py">المدفوعات</h2>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_py_q1">ماذا تعني تسميات حالة الدفع؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_py_a1">مجدول: لم يحلّ موعده. مسدد: تمّ سداده. متأخر: تجاوز موعده. جزئي: سُدِّد جزء منه. متجاوَز: تم تجاوزه يدوياً.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_py_q2">هل يمكنني تعديل التزام بعد إنشائه؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_py_a2">نعم. افتح الالتزام، اضغط تعديل. سيُعيد التطبيق احتساب الجدول المتبقي تلقائياً.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_py_q3">ماذا يفعل زر التخطي؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_py_a3">التخطي يؤجّل الدفعة دون اعتبارها مسددة أو متأخرة.</p></div>
+        </div>
+      </div>
+
+      <!-- الإشعارات -->
+      <div>
+        <h2 class="faq-cat-title" data-i18n="faq_cat_nt">الإشعارات</h2>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_nt_q1">توقفت الإشعارات — ماذا أفعل؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_nt_a1">اذهب إلى إعدادات الجهاز ← البطارية ← تحسين البطارية، وابحث عن Sequent واضبطه على "بدون تحسين".</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_nt_q2">متى يُطلَق تذكير الدفع؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_nt_a2">قبل يوم واحد من تاريخ الاستحقاق، في وقت الإشعار الذي اخترته في الإعدادات.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_nt_q3">كيف أغيّر وقت الإشعار؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_nt_a3">اذهب إلى الإعدادات داخل التطبيق وحدّث وقت الإشعار المفضل لديك.</p></div>
+        </div>
+      </div>
+
+      <!-- الإعدادات -->
+      <div>
+        <h2 class="faq-cat-title" data-i18n="faq_cat_st">الإعدادات</h2>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_st_q1">كيف أغيّر لغة العرض؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_st_a1">افتح الإعدادات واختر لغتك المفضلة. تتغير جميع نصوص التطبيق فوراً.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_st_q2">كيف أفعّل قفل التطبيق؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_st_a2">اذهب إلى الإعدادات وفعّل قفل التطبيق. اختر البصمة/الوجه أو رمز PIN.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_st_q3">ما العملات المدعومة؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_st_a3">يدعم Sequent 59 عملة تشمل العملات العربية والغربية ولاتينية وآسيوية وأفريقية.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span data-i18n="faq_st_q4">كيف أنشئ نسخة احتياطية؟</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-a"><p data-i18n="faq_st_a4">اذهب إلى الإعدادات ← النسخ الاحتياطي والاستعادة. يمكنك الإنشاء يدوياً أو تلقائياً كل أسبوع.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-disclaimer">
+        <div class="faq-disclaimer-icon">⚠️</div>
+        <div>
+          <div class="faq-disclaimer-title" data-i18n="disclaimer_title">تنبيه مهم</div>
+          <div class="faq-disclaimer-body" data-i18n="disclaimer_body">Sequent لا يُقدّم أي تمويل أو قروض، ولا يقوم بسداد أي التزام نيابةً عنك.</div>
+        </div>
+      </div>
+
+      <div class="faq-contact">
+        <p data-i18n="faq_contact_prompt">لم تجد ما تبحث عنه؟ نسعد بمساعدتك.</p>
+        <a href="mailto:sequent.ap@gmail.com" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span data-i18n="faq_contact_button">تواصل مع الدعم</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo"><img src="assets/images/app_icon.png" alt="Sequent"><span data-i18n="nav_logo_label">Sequent</span></div>
+      <p class="footer-tagline" data-i18n="footer_tagline">رفيقك الذكي لتنظيم الالتزامات المالية.</p>
+      <p class="footer-free" data-i18n="footer_free">✦ Sequent مجاني دائماً وبلا إعلانات.</p>
+      <p class="footer-disc" data-i18n="footer_disclaimer">Sequent أداة توثيق وتتبع فقط.</p>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="nav_home">تصفح</div>
+      <div class="footer-links">
+        <a href="index.html" data-i18n="footer_home">الرئيسية</a>
+        <a href="tour.html" data-i18n="footer_tour">جولة تفاعلية</a>
+        <a href="faq.html" data-i18n="footer_faq">الأسئلة الشائعة</a>
+        <a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="footer_contact">تواصل معنا</div>
+      <a href="https://x.com/sequent2026" target="_blank" rel="noopener" class="footer-social-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        @sequent2026
+      </a>
+      <a href="mailto:sequent.ap@gmail.com" class="footer-social-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        sequent.ap@gmail.com
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-rights" data-i18n="footer_rights">© 2026 Sequent.</span>
+    <div class="footer-langs-list">
+      <button class="footer-lang-item" data-lang="ar">العربية</button>
+      <button class="footer-lang-item" data-lang="en">English</button>
+      <button class="footer-lang-item" data-lang="es">Español</button>
+      <button class="footer-lang-item" data-lang="fr">Français</button>
+      <button class="footer-lang-item" data-lang="de">Deutsch</button>
+      <button class="footer-lang-item" data-lang="pt">Português</button>
+      <button class="footer-lang-item" data-lang="hi">हिन्दी</button>
+      <button class="footer-lang-item" data-lang="zh">中文</button>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-q').forEach(b => {
+      b.setAttribute('aria-expanded','false');
+      b.nextElementSibling.classList.remove('open');
+    });
+    if (!isOpen) {
+      btn.setAttribute('aria-expanded','true');
+      btn.nextElementSibling.classList.add('open');
+    }
+  });
+});
+</script>
+</body>
+</html>

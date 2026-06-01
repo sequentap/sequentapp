@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sequent — رفيقك الذكي لتنظيم الالتزامات المالية وجدولة الأقساط.">
+<title>Sequent</title>
+<script>
+(function(){
+  var l=localStorage.getItem('sq_lang')||'ar';
+  document.documentElement.lang=l;
+  document.documentElement.dir=l==='ar'?'rtl':'ltr';
+})();
+</script>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/home.css">
+<script src="i18n/ar.js" defer></script>
+<script src="i18n/en.js" defer></script>
+<script src="i18n/es.js" defer></script>
+<script src="i18n/fr.js" defer></script>
+<script src="i18n/de.js" defer></script>
+<script src="i18n/pt.js" defer></script>
+<script src="i18n/hi.js" defer></script>
+<script src="i18n/zh.js" defer></script>
+</head>
+<body>
+
+<!-- BANNER -->
+<div class="site-banner" id="site-banner">
+  <img src="assets/images/banner.png" alt="Sequent">
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="main-nav">
+  <div class="nav-inner">
+    <ul class="nav-links">
+      <li><a href="#ch1" data-i18n="nav_story">فصول القصة</a></li>
+      <li><a href="tour.html" data-i18n="nav_tour">جولة تفاعلية</a></li>
+      <li><a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+    </ul>
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/app_icon.png" alt="Sequent">
+      <span data-i18n="nav_logo_label">Sequent</span>
+    </a>
+    <div class="nav-actions">
+      <div class="nav-lang-wrap">
+        <button class="nav-lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="lang-label">العربية</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-lang-dropdown" id="lang-dropdown">
+          <button class="lang-opt" data-lang="ar">العربية</button>
+          <button class="lang-opt" data-lang="en">English</button>
+          <button class="lang-opt" data-lang="es">Español</button>
+          <button class="lang-opt" data-lang="fr">Français</button>
+          <button class="lang-opt" data-lang="de">Deutsch</button>
+          <button class="lang-opt" data-lang="pt">Português</button>
+          <button class="lang-opt" data-lang="hi">हिन्दी</button>
+          <button class="lang-opt" data-lang="zh">中文</button>
+        </div>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-expanded="false" aria-label="القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile nav — روابط فقط بدون اللغات -->
+<div class="nav-mobile" id="mob-nav">
+  <a href="#ch1" data-i18n="nav_story">فصول القصة</a>
+  <a href="tour.html" data-i18n="nav_tour">جولة تفاعلية</a>
+  <a href="faq.html" data-i18n="nav_faq">الأسئلة الشائعة</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <!-- نص — يمين -->
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">
+        <span class="eyebrow-dot"></span>
+        <span data-i18n="hero_eyebrow">إدارة الالتزامات المالية</span>
+      </div>
+      <h1 class="hero-h1 reveal d1" data-i18n="hero_headline">مساحتك الصامتة..</h1>
+      <p class="hero-h2 reveal d1" data-i18n="hero_headline_2">في عالم صاخب بالالتزامات.</p>
+      <p class="hero-desc reveal d2" data-i18n="hero_subheadline">
+        تطبيق لا يطلب بياناتك، ولا يتصل بالإنترنت، يمنح عقلك المساحة
+        ليرى كل أقساطه بوضوح تام ومن مكان واحد آمن وخاص تماماً.
+      </p>
+      <div class="hero-ctas reveal d3">
+        <a href="tour.html" class="btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span data-i18n="hero_cta_tour">جولة تفاعلية</span>
+        </a>
+        <a href="faq.html" class="btn-outline">
+          <span data-i18n="hero_cta_faq">الأسئلة الشائعة</span>
+        </a>
+      </div>
+      <div class="hero-badges reveal d4">
+        <span class="hero-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span data-i18n="hero_badge_free">مجاني دائماً وبلا إعلانات</span>
+        </span>
+        <span class="hero-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.56 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          <span data-i18n="hero_badge_offline">يعمل بدون إنترنت</span>
+        </span>
+        <span class="hero-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <span data-i18n="hero_badge_secure">بياناتك على جهازك فقط</span>
+        </span>
+      </div>
+    </div>
+    <!-- تصميم متحرك — يسار -->
+    <div class="hero-visual reveal d2">
+      <div class="hero-phone-glow"></div>
+      <div class="hero-anim-wrap">
+        <div class="anim-before">
+          <div class="chaos-label" data-i18n="anim_before_label">قبل Sequent</div>
+          <div class="chaos-card c1">
+            <div class="chaos-card-dot" style="background:#E8604C;"></div>
+            <div class="chaos-card-body"><div class="chaos-card-name" data-i18n="anim_card1_name">قسط السيارة</div><div class="chaos-card-date" data-i18n="anim_card1_date">متى كان موعده؟</div></div>
+            <div class="chaos-card-status" style="color:#E8604C;">⚠️</div>
+          </div>
+          <div class="chaos-card c2">
+            <div class="chaos-card-dot" style="background:#F59E0B;"></div>
+            <div class="chaos-card-body"><div class="chaos-card-name" data-i18n="anim_card2_name">إيجار المكتب</div><div class="chaos-card-date" data-i18n="anim_card2_date">لا أتذكر الرقم</div></div>
+            <div class="chaos-card-status" style="color:#F59E0B;">?</div>
+          </div>
+          <div class="chaos-card c3">
+            <div class="chaos-card-dot" style="background:#8B5CF6;"></div>
+            <div class="chaos-card-body"><div class="chaos-card-name" data-i18n="anim_card3_name">قسط اللابتوب</div><div class="chaos-card-date" data-i18n="anim_card3_date">هل سددته؟</div></div>
+            <div class="chaos-card-status" style="color:#8B5CF6;">?</div>
+          </div>
+          <div class="chaos-card c4">
+            <div class="chaos-card-dot" style="background:#EC4899;"></div>
+            <div class="chaos-card-body"><div class="chaos-card-name" data-i18n="anim_card4_name">اشتراك النادي</div><div class="chaos-card-date" data-i18n="anim_card4_date">هذا الشهر؟</div></div>
+            <div class="chaos-card-status" style="color:#EC4899;">!</div>
+          </div>
+          <div class="chaos-note" data-i18n="anim_chaos_note">📝 ملاحظات متناثرة هنا وهناك...</div>
+        </div>
+        <div class="anim-arrow">
+          <div class="arrow-line"></div>
+          <div class="arrow-label">Sequent</div>
+          <div class="arrow-head">↓</div>
+        </div>
+        <div class="anim-after">
+          <div class="order-label" data-i18n="anim_after_label">مع Sequent</div>
+          <div class="order-header">
+            <div class="order-header-text" data-i18n="mock_total_balance">إجمالي الرصيد المتبقي</div>
+            <div class="order-header-amount"><span data-i18n="mock_amount">94,500</span> <span data-i18n="mock_currency">ر.س</span></div>
+            <div class="order-header-sub" data-i18n="anim_header_sub">مستحق هذا الشهر · 1,650 ر.س</div>
+          </div>
+          <div class="order-card oc1">
+            <div class="order-card-dot" style="background:#E8604C;"></div>
+            <div class="order-card-body"><div class="order-card-name" data-i18n="anim_card1_name">قسط السيارة</div><div class="order-card-date" data-i18n="anim_date1">28 مايو 2026</div></div>
+            <button class="order-pay-btn" data-i18n="mock_pay_now">ادفع الآن</button>
+          </div>
+          <div class="order-card oc2">
+            <div class="order-card-dot" style="background:#1A9E5A;"></div>
+            <div class="order-card-body"><div class="order-card-name" data-i18n="anim_card2_name">إيجار المكتب</div><div class="order-card-date" data-i18n="anim_date2">1 يونيو 2026</div></div>
+            <div class="order-card-badge" style="color:#1A9E5A;background:#E8F7EF;" data-i18n="anim_scheduled">مجدول</div>
+          </div>
+          <div class="order-card oc3">
+            <div class="order-card-dot" style="background:#0056D2;"></div>
+            <div class="order-card-body"><div class="order-card-name" data-i18n="anim_card3_name">قسط اللابتوب</div><div class="order-card-date" data-i18n="anim_date3">5 يونيو 2026</div></div>
+            <div class="order-card-badge" style="color:#0056D2;background:#EEF4FF;" data-i18n="anim_scheduled">مجدول</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 1 — المشكلة: نص يمين + صورة يسار -->
+<section class="chapter ch-gray" id="ch1">
+  <div class="chapter-inner">
+    <div class="ch-content">
+      <div class="chapter-tag reveal" data-i18n="ch1_tag">الفصل الأول · المشكلة</div>
+      <h2 class="chapter-h1 reveal d1" data-i18n="ch1_h1">أنت لا تحمل الأقساط في جيبك..</h2>
+      <p class="chapter-h2 reveal d1" data-i18n="ch1_h2">أنت تحملها في رأسك.</p>
+      <p class="chapter-desc reveal d2" data-i18n="ch1_desc">
+        ذلك الثقل الخفي الذي يرافقك طوال الشهر ليس بسبب قيمة المبالغ،
+        بل لأنها معلقة في زوايا ذاكرتك وتخشى أن تسقط منها دفعة واحدة وتفاجئك.
+      </p>
+      <div class="chapter-support reveal d2" data-i18n="ch1_support">
+        عندما تتبعثر التواريخ في ذهنك، يصبح التفكير في المستقبل عبئاً مستمراً.
+      </div>
+      <div class="chapter-points reveal d3">
+        <div class="chapter-point"><span class="pt-icon pt-blue">!</span><span data-i18n="ch1_p1">نسيان تواريخ الاستحقاق والمفاجآت المؤلمة في نهاية الشهر</span></div>
+        <div class="chapter-point"><span class="pt-icon pt-blue">?</span><span data-i18n="ch1_p2">عدم معرفة كم بقي من الدين بالضبط — فقط تخمين مستمر</span></div>
+        <div class="chapter-point"><span class="pt-icon pt-blue">↗</span><span data-i18n="ch1_p3">التزامات مبعثرة بين الذاكرة والمذكرات وجداول الإكسل</span></div>
+      </div>
+    </div>
+    <div class="ch-visual reveal d1">
+      <div class="ch-phone-wrap">
+        <div class="ch-phone-glow"></div>
+        <div class="ch-phone">
+          <div class="ch-notch"></div>
+          <div class="ch-screen">
+            <img id="img-ch1" src="assets/images/screens/screen8_ar.png" alt="Sequent">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 2 — الحل: صورة يمين + نص يسار -->
+<section class="chapter ch-white" id="ch2">
+  <div class="chapter-inner flipped">
+    <div class="ch-visual reveal d1">
+      <div class="ch-phone-wrap">
+        <div class="ch-phone-glow"></div>
+        <div class="ch-phone">
+          <div class="ch-notch"></div>
+          <div class="ch-screen">
+            <img id="img-ch2" src="assets/images/screens/screen3_ar.png" alt="Sequent">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ch-content">
+      <div class="chapter-tag reveal" data-i18n="ch2_tag">الفصل الثاني · الحل</div>
+      <h2 class="chapter-h1 reveal d1" data-i18n="ch2_h1">ضع العبء على الشاشة..</h2>
+      <p class="chapter-h2 reveal d1"><span data-i18n="ch2_h2">وشاهد الفوضى وهي </span><em data-i18n="ch2_h2_em">تترتب تلقائياً.</em></p>
+      <p class="chapter-desc reveal d2" data-i18n="ch2_desc">
+        بمجرد توثيق التزامك الأول، تتحول الأرقام المقلقة إلى خارطة طريق
+        مرئية وذكية، تتعدل وتتجاوب مع كل قرار تتخذه بنقرة واحدة
+        ودون فقدان تاريخك المالي.
+      </p>
+      <div class="chapter-support reveal d2" data-i18n="ch2_support">
+        أداة تتبع مستقلة تماماً تعيد حساب الخطوات فوراً لتبقي عينك على المسار الصحيح.
+      </div>
+      <div class="chapter-points reveal d3">
+        <div class="chapter-point"><span class="pt-icon pt-blue">✓</span><span data-i18n="ch2_p1">جدول سداد تلقائي كامل من أول تاريخ استحقاق</span></div>
+        <div class="chapter-point"><span class="pt-icon pt-blue">✓</span><span data-i18n="ch2_p2">سداد، تخطي، دفع مقدم، أو تسوية كاملة — بنقرة واحدة</span></div>
+        <div class="chapter-point"><span class="pt-icon pt-blue">✓</span><span data-i18n="ch2_p3">التعديل يعيد الجدولة تلقائياً دون المساس بالسجل المدفوع</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 3 — النتيجة: نص يمين + صورة يسار -->
+<section class="chapter ch-gold-accent" id="ch3">
+  <div class="gold-strip"></div>
+  <div class="chapter-inner">
+    <div class="ch-content">
+      <div class="chapter-tag reveal" data-i18n="ch3_tag">الفصل الثالث · النتيجة</div>
+      <h2 class="chapter-h1 reveal d1" data-i18n="ch3_h1">المشهد الأجمل:</h2>
+      <p class="chapter-h2 reveal d1"><span data-i18n="ch3_h2">رؤية اليوم الذي تصبح فيه التزاماتك </span><em data-i18n="ch3_h2_em">"صفراً".</em></p>
+      <p class="chapter-desc reveal d2" data-i18n="ch3_desc">
+        ليس هناك شعور يضاهي مراقبة مؤشر إنجازك وهو ينمو، والنظر إلى
+        تاريخ محدد في المستقبل يخبرك بوضوح: "هنا ينتهي آخر قسط،
+        وهنا تنام قرير العين".
+      </p>
+      <div class="chapter-support reveal d2" data-i18n="ch3_support">
+        حوّل الغد المجهول إلى تواريخ تحتفل بالوصول إليها، واقترب من خط النهاية بكل يقين.
+      </div>
+      <div class="chapter-points reveal d3">
+        <div class="chapter-point"><span class="pt-icon pt-gold">🏆</span><span data-i18n="ch3_p1">تاريخ محدد لتحررك المالي — ليس تقريباً، بل بالدقة الرياضية</span></div>
+        <div class="chapter-point"><span class="pt-icon pt-gold">📈</span><span data-i18n="ch3_p2">مؤشر صحة مالية يتحسن مع كل قسط تسدده</span></div>
+        <div class="chapter-point"><span class="pt-icon pt-gold">🎉</span><span data-i18n="ch3_p3">20 لحظة احتفالية تلقائية — Sequent يحتفل معك في كل إنجاز</span></div>
+      </div>
+    </div>
+    <div class="ch-visual reveal d1">
+      <div class="ch-phone-wrap">
+        <div class="ch-phone-glow"></div>
+        <div class="ch-phone">
+          <div class="ch-notch"></div>
+          <div class="ch-screen">
+            <img id="img-ch3" src="assets/images/screens/screen6_ar.png" alt="Sequent">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo"><img src="assets/images/app_icon.png" alt="Sequent"><span data-i18n="nav_logo_label">Sequent</span></div>
+      <p class="footer-tagline" data-i18n="footer_tagline">رفيقك الذكي لتنظيم الالتزامات المالية وجدولة الأقساط بكل سهولة.</p>
+      <p class="footer-free" data-i18n="footer_free">✦ Sequent مجاني دائماً وبلا إعلانات.</p>
+      <p class="footer-disc" data-i18n="footer_disclaimer">Sequent أداة توثيق وتتبع فقط. لا يُقدّم تمويلاً أو قروضاً، ولا يسدد أي التزام نيابةً عنك.</p>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="nav_home">تصفح</div>
+      <div class="footer-links">
+        <a href="index.html" data-i18n="footer_home">الرئيسية</a>
+        <a href="tour.html" data-i18n="footer_tour">جولة تفاعلية</a>
+        <a href="faq.html" data-i18n="footer_faq">الأسئلة الشائعة</a>
+        <a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="footer_contact">تواصل معنا</div>
+      <a href="https://x.com/sequent2026" target="_blank" rel="noopener" class="footer-social-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        @sequent2026
+      </a>
+      <a href="mailto:sequent.ap@gmail.com" class="footer-social-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        sequent.ap@gmail.com
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-rights" data-i18n="footer_rights">© 2026 Sequent. جميع الحقوق محفوظة.</span>
+    <div class="footer-langs-list">
+      <button class="footer-lang-item" data-lang="ar">العربية</button>
+      <button class="footer-lang-item" data-lang="en">English</button>
+      <button class="footer-lang-item" data-lang="es">Español</button>
+      <button class="footer-lang-item" data-lang="fr">Français</button>
+      <button class="footer-lang-item" data-lang="de">Deutsch</button>
+      <button class="footer-lang-item" data-lang="pt">Português</button>
+      <button class="footer-lang-item" data-lang="hi">हिन्दी</button>
+      <button class="footer-lang-item" data-lang="zh">中文</button>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
